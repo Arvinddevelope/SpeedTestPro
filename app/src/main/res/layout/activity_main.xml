@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_graph_border"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpeedTest Pro"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Network Type Info -->
+        <TextView
+            android:id="@+id/tvNetworkType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connected via: --"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ✅ Custom View Class Used Here -->
+        <com.arvind.speedtestpro.SpeedGraphView
+            android:id="@+id/graphView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_graph_border"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Results Section -->
+        <TextView
+            android:id="@+id/tvDownloadSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download Speed: -- Mbps"
+            android:textSize="18sp"
+            android:textColor="#1E88E5"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvUploadSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Speed: -- Mbps"
+            android:textSize="18sp"
+            android:textColor="#43A047"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvPing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ping: -- ms"
+            android:textSize="18sp"
+            android:textColor="#FB8C00"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Start/Stop Button -->
+        <Button
+            android:id="@+id/btnStartTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Speed Test"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge"/>
+
+    </LinearLayout>
+</ScrollView>
